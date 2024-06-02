@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rene/static/css/main.0f9e7577.css",
+    "main.js": "/rene/static/js/main.a5576890.js",
+    "static/media/imageProfile.jpeg": "/rene/static/media/imageProfile.6cd16268d586e63fbfcc.jpeg",
+    "index.html": "/rene/index.html",
+    "main.0f9e7577.css.map": "/rene/static/css/main.0f9e7577.css.map",
+    "main.a5576890.js.map": "/rene/static/js/main.a5576890.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f9e7577.css",
+    "static/js/main.a5576890.js"
+  ]
+}
