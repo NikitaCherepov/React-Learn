@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useRef} from 'react';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom'
 import Header from './header'
 import Menu from './menu'
-import Profile from './profile'
+import Profile from '../pages/profile'
 import ModalName from './modalName'
-import Search from './search'
-import Test from './test'
+import Search from '../pages/search'
+import Test from '../pages/test'
 
 import '../css/index.css'
 import './menu'
@@ -42,6 +43,7 @@ function App() {
 
 
     return (
+        <Router>
         <div className="main">
         <ModalName show={showModalName} 
         onClose={closeModalName} 
@@ -51,11 +53,19 @@ function App() {
         <Header user={user}/>
         <div className="middleBlock">
         <Menu changeCurrentTab = {changeCurrentTab} currentTab={currentTab}/>
-        <Search currentTab={currentTab}/>
+        <Routes>
+            <Route path="/" element={<Profile user={user} openModalName={openModalName}/>}/>
+            <Route path="search" element={<Search/>}/>
+            <Route path="test" element={<Test/>}/>
+        </Routes>
+
+        
+        {/* <Search currentTab={currentTab}/>
         <Profile user={user} openModalName={openModalName} currentTab={currentTab}/>
-        <Test currentTab={currentTab}/>
+        <Test currentTab={currentTab}/> */}
         </div>
       </div>
+      </Router>
     )
 }
 

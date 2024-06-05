@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter, useLocation } from 'react-router-dom';
 import Home from './pages/Home'
 import About from './pages/About'
 import MainPage from './pages/MainPage'
 
 
 function App() {
+
   return (
+    <>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainPage/>}>
@@ -16,6 +18,7 @@ function App() {
       </Route>
     </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

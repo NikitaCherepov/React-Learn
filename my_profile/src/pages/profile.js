@@ -5,7 +5,6 @@ import imageProfile from "../img/imageProfile.jpeg"
 //Создаём меню
 function Profile({user, openModalName, currentTab}) {
 
-    if (currentTab === "profile") {
         return(
             <div className="profile">
                 <div className="profile__short">
@@ -29,7 +28,6 @@ function Profile({user, openModalName, currentTab}) {
                 </div>
             </div>
         )
-    }
 
 }
 

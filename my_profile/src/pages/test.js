@@ -30,7 +30,6 @@ function Test({currentTab}) {
     
     const numbers = [1,2,3,4,5];
 
-    if (currentTab === "test") {
         return (
             <div>
             <ul>
@@ -45,6 +44,5 @@ function Test({currentTab}) {
             <div>Имя: {user.name} <br/>Почта: {user.email} <br/> Телефон: {user.phone}</div>
             </div>
         )
-    }
 }
 export default Test = React.memo(Test)
